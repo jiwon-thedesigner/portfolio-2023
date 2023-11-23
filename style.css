@@ -1,0 +1,399 @@
+/* fonts */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable-dynamic-subset.css");
+@font-face {
+  font-family: "Chosunilbo_myungjo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@import url("https://fonts.cdnfonts.com/css/rajdhani");
+.chosun {
+  font-family: "Chosunilbo_myungjo";
+}
+
+/* reset */
+* {
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* container */
+.container {
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  background-color: #231f20;
+}
+.container::after {
+  display: block;
+  content: "";
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1001;
+  background-image: url("https://i.ibb.co/x3TCktM/645cbb8ec449398255b76326-noise.gif");
+  background-position: 0 0;
+  background-size: auto;
+  pointer-events: none;
+  opacity: 0.05;
+  transition: opacity 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  visibility: visible;
+  /*   원본 페이지 : https://www.rawlab.co */
+}
+
+/* header */
+/* logo */
+.main_header {
+  width: 100%;
+  height: 88px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 100px 20px 100px;
+  border-bottom: 1px solid #ddd;
+}
+.main_header .logo_container {
+  flex: 3 0 0;
+  display: flex;
+  align-items: center;
+}
+.main_header .logo_container .logo_img {
+  padding-left: 10px;
+}
+.main_header .logo_container .logo_tit {
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+}
+/* menu */
+.main_header .top_menu {
+  flex: 4 0 0;
+  display: flex;
+  align-items: center;
+}
+.main_header .top_menu .menu_list {
+  margin: 0 auto;
+}
+.main_header .top_menu #lis_4 {
+  padding-right: 0;
+}
+.main_header .top_menu .menu_list a {
+  font-size: 18px;
+  font-weight: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+/* header 오른쪽 버튼 */
+.main_header .btn_container {
+  flex: 3 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+}
+
+.main_header .btn_container .btn_inner {
+  padding: 12px 22px;
+  border-radius: 50px;
+  background-color: #35af60;
+}
+.main_header .btn_container .btn_inner .btn_tit {
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #fff;
+}
+.main_header .btn_container .btn_inner .btn_img {
+  vertical-align: bottom;
+  padding-left: 4px;
+}
+
+/* intro */
+.intro {
+  width: 100%;
+}
+.intro .intro_container {
+  margin: 0 160px 0 160px;
+}
+.intro .intro_tit {
+  font-size: 110px;
+  line-height: 118px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  padding-top: 200px;
+  padding-bottom: 60px;
+}
+/* overview */
+.intro .ov_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+.intro .ov_container .ov_tit {
+  width: 20%;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  padding-right: 100px;
+}
+
+.intro .ov_container .ov_detail {
+  width: 80%;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 28px;
+  letter-spacing: 1px;
+  color: #fff;
+}
+.intro .ov_container .ov_detail span {
+  border-bottom: 1px solid #fff;
+  padding-bottom: 1px;
+}
+/* intro > arrow */
+.intro .arrow_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 140px;
+  margin-bottom: 86px;
+}
+.intro .arrow_container .arrow_inner {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  border-radius: 100px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.intro .arrow_container .arrow_inner .arrow_img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -30%);
+}
+
+/* About */
+.about {
+  padding: 0 160px 0 160px;
+}
+.about .about_container {
+  margin-bottom: 160px;
+}
+.about .about_container .about_tit {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  color: #fff;
+  margin-bottom: 100px;
+}
+
+.about .about_container .about_inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+/* about text box */
+.about .about_container .text_box {
+  width: 49%;
+}
+.about .about_container .text_box .about_big_tit {
+  font-size: 72px;
+  font-weight: normal;
+  text-align: left;
+  color: #fff;
+  margin-bottom: 40px;
+}
+.about .about_container .about_detail {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 28px;
+  letter-spacing: 1px;
+  text-align: left;
+  color: #fff;
+  margin-bottom: 40px;
+  padding-right: 20px;
+}
+
+.about .about_container .text_box .icon_box a {
+  padding-right: 16px;
+}
+/* about image box */
+.about .about_container .img_box {
+  width: 49%;
+  height: 400px;
+  background-color: #ddd;
+}
+
+/* about info */
+
+.about .about_container .about_info {
+}
+
+.about .about_container .about_info .about_column {
+  display: flex;
+  margin-bottom: 40px;
+}
+.about .about_container .about_info .about_column .about_row {
+  width: 50%;
+  padding: 10px;
+}
+/* about info text */
+.about_info_tit {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ddd;
+  text-decoration-line: underline;
+  text-underline-offset: 4px;
+}
+.about_info_detail {
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  line-height: 28px;
+  color: #fff;
+}
+/* Skill */
+.skill {
+  padding: 0 160px 0 160px;
+}
+.skill .skill_container {
+  margin-bottom: 160px;
+}
+.skill .skill_container .skill_tit {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 100px;
+}
+.skill .skill_container .skill_column .skills {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+  padding: 0 0 0 80px;
+}
+
+.skill .skill_container .skill_column .skills .skill_object {
+  display: flex;
+  flex-wrap: wrap;
+  width: 33.3333%;
+}
+.skill .skill_container .skill_column .skills .skill_object .skill_title_group {
+  margin-left: 40px;
+}
+.skill
+  .skill_container
+  .skill_column
+  .skills
+  .skill_object
+  .skill_title_group
+  h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 24px;
+  padding-bottom: 8px;
+}
+/* project */
+.project {
+  padding: 0 160px 0 160px;
+}
+.project .project_container {
+  margin-bottom: 160px;
+}
+.project .project_container .project_tit {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 100px;
+}
+.project .project_container .project_column .projects {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+.project .project_container .project_column .projects .project_object {
+  width: 31.1111%;
+  height: 315px;
+  margin-right: 3.3333%;
+  border-radius: 10px;
+  background-color: palegoldenrod;
+}
+.project .project_container .project_column .projects .project_object img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.project .project_container .project_column .projects #project_object_01_3 {
+  margin-right: 0;
+}
+/* Contact */
+.contact {
+  padding: 0 160px 160px 160px;
+}
+.contact .contact_container {
+}
+.contact .contact_container .contact_tit {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 100px;
+}
+
+.contact .contact_container .contact_info .contact_big_tit {
+  font-size: 72px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 40px;
+}
+.contact .contact_container .contact_info .contact_detail {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 60px;
+}
+.contact .contact_container .btn_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.contact .contact_container .btn_container .btn_inner {
+  padding: 12px 22px;
+  border-radius: 50px;
+  background-color: #35af60;
+}
+.contact .contact_container .btn_container .btn_inner .btn_tit {
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #fff;
+}
+.contact .contact_container .btn_container .btn_inner .btn_img {
+  vertical-align: bottom;
+  padding-left: 4px;
+}
