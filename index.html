@@ -4,47 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JIWON'S PORTFOLIO</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="/main/img/ci.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./img/ci.png" />
   </head>
   <body>
     <div class="container pretendard">
       <!-- header -->
-      <header class="main_header">
+      <header id="header" class="main_header">
         <!-- 로고 -->
         <div class="logo_container">
-          <a class="logo_tit" href="#">portfolio</a>
-          <img class="logo_img" src="/main/img/ci.png" alt="로고 이미지" />
+          <a class="logo_tit" href="#header">portfolio</a>
+          <img class="logo_img" src="./img/ci.png" alt="로고 이미지" />
         </div>
         <!-- 메뉴 리스트 -->
         <ul class="top_menu">
           <li class="menu_list" id="lis_1">
-            <a href="#">About</a>
+            <a rel="bookmark" href="#about">About</a>
           </li>
           <li class="menu_list" id="lis_2">
-            <a href="#">Skill</a>
+            <a rel="bookmark" href="#skill">Skill</a>
           </li>
           <li class="menu_list" id="lis_3">
-            <a href="#">Project</a>
+            <a rel="bookmark" href="#project">Project</a>
           </li>
           <li class="menu_list" id="lis_4">
-            <a href="#">Contact</a>
+            <a rel="bookmark" href="#contact">Contact</a>
           </li>
         </ul>
         <!-- header 오른쪽 버튼 -->
         <div class="btn_container">
           <div class="btn_inner">
             <a class="btn_tit" href="#">Kakao</a>
-            <img
-              class="btn_img"
-              src="/main/img/arrow.png"
-              alt="화살표 아이콘"
-            />
+            <img class="btn_img" src="./img/arrow.png" alt="화살표 아이콘" />
           </div>
         </div>
       </header>
       <!-- intro -->
-      <section class="intro">
+      <section id="intro" class="intro">
         <div class="intro_container">
           <h1 class="intro_tit">
             Hi, There!
@@ -71,15 +67,16 @@
             <div class="arrow_inner">
               <img
                 class="arrow_img"
-                src="/main/img/arrow_bottom.png"
+                src="./img/arrow_bottom.png"
                 alt="아래 화살표"
               />
             </div>
           </div>
         </div>
       </section>
+      <!-- //intro -->
       <!-- about -->
-      <section class="about">
+      <section id="about" class="about">
         <div class="about_container">
           <h2 class="about_tit">About</h2>
           <div class="about_inner">
@@ -98,19 +95,17 @@
               </p>
               <div class="icon_box">
                 <a href="https://www.behance.net/drumjiwon"
-                  ><img src="/main/img/icon_behance.png" alt="비핸스 아이콘"
+                  ><img src="./img/icon_behance.png" alt="비핸스 아이콘"
                 /></a>
                 <a href="https://www.instagram.com/drum_jiwon/"
-                  ><img
-                    src="/main/img/icon_instagram.png"
-                    alt="인스타그램 아이콘"
+                  ><img src="./img/icon_instagram.png" alt="인스타그램 아이콘"
                 /></a>
                 <a
                   href="https://www.linkedin.com/in/%EC%A7%80%EC%9B%90-%EA%B9%80-61111b28a/"
-                  ><img src="/main/img/icon_linkedin.png" alt="링크드인 아이콘"
+                  ><img src="./img/icon_linkedin.png" alt="링크드인 아이콘"
                 /></a>
                 <a href="https://github.com/jiwon-thedesigner/portfolio"
-                  ><img src="/main/img/icon_github.png" alt="깃허브 아이콘"
+                  ><img src="./img/icon_github.png" alt="깃허브 아이콘"
                 /></a>
               </div>
             </div>
@@ -160,100 +155,95 @@
           </div>
         </div>
       </section>
+      <!-- //about -->
       <!-- skill -->
-      <section class="skill">
+      <section id="skill" class="skill">
         <div class="skill_container">
           <h2 class="skill_tit">Skill</h2>
           <ul class="skill_column">
             <li class="">
               <ul class="skills">
                 <li class="skill_object">
-                  <img src="/main/img/icon_figma.png" alt="피그마 아이콘" />
+                  <img src="./img/icon_figma.png" alt="피그마 아이콘" />
                   <div class="skill_title_group">
                     <h4>Figma</h4>
                     <div class="skill_star_group">
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
                     </div>
                   </div>
                 </li>
                 <li class="skill_object">
-                  <img src="/main/img/icon_sketch.png" alt="스케치 아이콘" />
+                  <img src="./img/icon_sketch.png" alt="스케치 아이콘" />
                   <div class="skill_title_group">
                     <h4>Sketch</h4>
                     <div class="skill_star_group">
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
                       <img
-                        src="/main/img/icon__star_empty.png"
+                        src="./img/icon__star_empty.png"
                         alt="빈 별 이미지"
                       />
                     </div>
                   </div>
                 </li>
                 <li class="skill_object">
-                  <img src="/main/img/icon_xd.png" alt="XD 아이콘" />
+                  <img src="./img/icon_xd.png" alt="XD 아이콘" />
                   <div class="skill_title_group">
                     <h4>Adobe XD</h4>
                     <div class="skill_star_group">
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
                     </div>
                   </div>
                 </li>
               </ul>
               <ul class="skills">
                 <li class="skill_object">
-                  <img src="/main/img/icon_photoshop.png" alt="포토샵 아이콘" />
+                  <img src="./img/icon_photoshop.png" alt="포토샵 아이콘" />
                   <div class="skill_title_group">
                     <h4>Adobe Photoshop</h4>
                     <div class="skill_star_group">
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
                     </div>
                   </div>
                 </li>
                 <li class="skill_object">
-                  <img
-                    src="/main/img/icon_illustrator.png"
-                    alt="일러스트 아이콘"
-                  />
+                  <img src="./img/icon_illustrator.png" alt="일러스트 아이콘" />
                   <div class="skill_title_group">
                     <h4>Adobe Illustrator</h4>
                     <div class="skill_star_group">
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
                     </div>
                   </div>
                 </li>
                 <li class="skill_object">
-                  <img
-                    src="/main/img/icon_indesign.png"
-                    alt="인디자인 아이콘"
-                  />
+                  <img src="./img/icon_indesign.png" alt="인디자인 아이콘" />
                   <div class="skill_title_group">
                     <h4>Adobe Indesign</h4>
                     <div class="skill_star_group">
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
                       <img
-                        src="/main/img/icon__star_empty.png"
+                        src="./img/icon__star_empty.png"
                         alt="빈 별 이미지"
                       />
                     </div>
@@ -262,48 +252,48 @@
               </ul>
               <ul class="skills">
                 <li class="skill_object">
-                  <img src="/main/img/icon_html.png" alt="html 아이콘" />
+                  <img src="./img/icon_html.png" alt="html 아이콘" />
                   <div class="skill_title_group">
                     <h4>HTML</h4>
                     <div class="skill_star_group">
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
                     </div>
                   </div>
                 </li>
                 <li class="skill_object">
-                  <img src="/main/img/icon_css.png" alt="CSS 아이콘" />
+                  <img src="./img/icon_css.png" alt="CSS 아이콘" />
                   <div class="skill_title_group">
                     <h4>CSS</h4>
                     <div class="skill_star_group">
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
                     </div>
                   </div>
                 </li>
                 <li class="skill_object">
                   <img
-                    src="/main/img/icon_javascript.png"
+                    src="./img/icon_javascript.png"
                     alt="자바스크립트 아이콘"
                   />
                   <div class="skill_title_group">
                     <h4>javascript</h4>
                     <div class="skill_star_group">
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
                       <img
-                        src="/main/img/icon__star_empty.png"
+                        src="./img/icon__star_empty.png"
                         alt="빈 별 이미지"
                       />
                       <img
-                        src="/main/img/icon__star_empty.png"
+                        src="./img/icon__star_empty.png"
                         alt="빈 별 이미지"
                       />
                     </div>
@@ -313,52 +303,49 @@
               <ul class="skills">
                 <li class="skill_object">
                   <img
-                    src="/main/img/icon_aftereffects.png"
+                    src="./img/icon_aftereffects.png"
                     alt="애프터이펙트 아이콘"
                   />
                   <div class="skill_title_group">
                     <h4>Adobe After Effects</h4>
                     <div class="skill_star_group">
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
                     </div>
                   </div>
                 </li>
                 <li class="skill_object">
                   <img
-                    src="/main/img/icon_premierepro.png"
+                    src="./img/icon_premierepro.png"
                     alt="프리미어프로 아이콘"
                   />
                   <div class="skill_title_group">
                     <h4>Adobe Premiere Pro</h4>
                     <div class="skill_star_group">
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
                       <img
-                        src="/main/img/icon__star_empty.png"
+                        src="./img/icon__star_empty.png"
                         alt="빈 별 이미지"
                       />
                     </div>
                   </div>
                 </li>
                 <li class="skill_object">
-                  <img
-                    src="/main/img/icon_cinema4d.png"
-                    alt="시네마 4D 아이콘"
-                  />
+                  <img src="./img/icon_cinema4d.png" alt="시네마 4D 아이콘" />
                   <div class="skill_title_group">
                     <h4>Cinema 4D</h4>
                     <div class="skill_star_group">
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
-                      <img src="/main/img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
+                      <img src="./img/icon_star.png" alt="별 이미지" />
                     </div>
                   </div>
                 </li>
@@ -367,8 +354,9 @@
           </ul>
         </div>
       </section>
+      <!-- //skill -->
       <!-- project -->
-      <section class="project">
+      <section id="project" class="project">
         <div class="project_container">
           <h2 class="project_tit">Project</h2>
           <ul class="project_column">
@@ -376,17 +364,17 @@
               <ul class="projects">
                 <li class="project_object">
                   <a href="/FUNiDEA/index.html">
-                    <img src="/main/img/list_img_funidea.png" alt="" />
+                    <img src="./img/list_img_funidea.png" alt="" />
                   </a>
                 </li>
                 <li class="project_object">
                   <a href="/mega/index01.html">
-                    <img src="/main/img/list_img_mega.png" alt="" />
+                    <img src="./img/list_img_mega.png" alt="" />
                   </a>
                 </li>
                 <li class="project_object" id="project_object_01_3">
                   <a href="/pluto/pluto.html">
-                    <img src="/main/img/list_img_pluto.png" alt="" />
+                    <img src="./img/list_img_pluto.png" alt="" />
                   </a>
                 </li>
               </ul>
@@ -395,7 +383,7 @@
               <ul class="projects">
                 <li class="project_object">
                   <a href="/fender/fender_main.html">
-                    <img src="/main/img/list_img_fender.png" alt="" />
+                    <img src="./img/list_img_fender.png" alt="" />
                   </a>
                 </li>
                 <li class="project_object"></li>
@@ -405,8 +393,9 @@
           </ul>
         </div>
       </section>
+      <!-- //project -->
       <!-- contact -->
-      <section class="contact">
+      <section id="contact" class="contact">
         <div class="contact_container">
           <h2 class="contact_tit">Contact</h2>
           <div class="contact_info">
@@ -419,15 +408,12 @@
           <div class="btn_container">
             <div class="btn_inner">
               <a class="btn_tit" href="#">Contact Start</a>
-              <img
-                class="btn_img"
-                src="/main/img/arrow.png"
-                alt="화살표 아이콘"
-              />
+              <img class="btn_img" src="./img/arrow.png" alt="화살표 아이콘" />
             </div>
           </div>
         </div>
       </section>
+      <!-- //contact -->
     </div>
   </body>
 </html>

@@ -130,7 +130,7 @@ a {
   width: 100%;
 }
 .intro .intro_container {
-  margin: 0 160px 0 160px;
+  margin: 0 160px 160px 160px;
 }
 .intro .intro_tit {
   font-size: 110px;
@@ -189,7 +189,7 @@ a {
   transform: translate(-50%, -30%);
 }
 
-/* About */
+/* about */
 .about {
   padding: 0 160px 0 160px;
 }
@@ -202,7 +202,7 @@ a {
   text-transform: uppercase;
   color: #fff;
   color: #fff;
-  margin-bottom: 100px;
+  padding: 100px 0;
 }
 
 .about .about_container .about_inner {
@@ -284,7 +284,7 @@ a {
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
-  margin-bottom: 100px;
+  padding: 100px 0;
 }
 .skill .skill_container .skill_column .skills {
   display: flex;
@@ -326,7 +326,7 @@ a {
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
-  margin-bottom: 100px;
+  padding: 100px 0;
 }
 .project .project_container .project_column .projects {
   display: flex;
@@ -360,7 +360,7 @@ a {
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
-  margin-bottom: 100px;
+  padding: 100px 0;
 }
 
 .contact .contact_container .contact_info .contact_big_tit {
