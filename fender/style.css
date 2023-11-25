@@ -30,35 +30,143 @@ a {
   color: inherit;
 }
 
-/* container */
-.container {
-  margin: 0 auto;
-  width: 100%;
-  position: relative;
-  background-color: #231f20;
-}
-.container::after {
-  display: block;
-  content: "";
+/* Fender */
 
-  position: fixed;
-  left: 0;
+.fender.container {
+  position: relative;
+}
+.header_container {
+  position: absolute;
   top: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1001;
-  background-image: url("https://i.ibb.co/x3TCktM/645cbb8ec449398255b76326-noise.gif");
-  background-position: 0 0;
-  background-size: auto;
-  pointer-events: none;
-  opacity: 0.05;
-  transition: opacity 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  visibility: visible;
-  /*   원본 페이지 : https://www.rawlab.co */
+  width: 100%;
+  padding-top: 40px;
+}
+.header_row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header_left {
+  position: absolute;
+  left: 100px;
+}
+.header_left_logo {
+}
+
+.header_center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  /*background-color: darkblue;*/
+}
+.header_center_menu {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.header_center_menu li {
+  margin-right: 60px;
+}
+.header_center_menu li:last-of-type {
+  margin-right: 0;
+}
+
+.header_right {
+  position: absolute;
+  right: 100px;
+  /*background-color: blueviolet;*/
+}
+.header_right_menu {
+  display: flex;
+}
+.header_right_menu li {
+  margin-right: 40px;
+}
+.header_right_menu li:last-of-type {
+  margin-right: 0;
+}
+
+.main_container {
+}
+.main_container .main_title {
+  position: absolute;
+  left: 100px;
+  bottom: 100px;
+}
+
+.main_title h1 {
+  color: #fff;
+  font-size: 46px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+.main_title h4 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 1;
+  margin-bottom: 40px;
+}
+.main_title .btn_shop {
+  color: #222;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  line-height: 1;
+  padding: 14px 40px;
+  border: 0;
+  border-radius: 50px;
+  background: #ffc452;
+  margin-right: 10px;
+}
+.btn_box {
+  display: flex;
+  align-items: center;
+}
+.btn_box .btn_shop {
+  margin-right: 20px;
+}
+.btn_box .btn_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 46px;
+  border: 0;
+  border-radius: 50px;
+  background: rgba(0, 0, 0, 0.2);
+  margin-right: 12px;
+}
+
+.main_container .sns_box {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sns_box .sns_icon {
+  width: 46px;
+  height: 46px;
+  border: 0;
+  background: none;
 }
 
 video {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
   width: 100%;
-  height: 100vh;
   object-fit: cover;
+  z-index: -1;
 }
