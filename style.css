@@ -60,13 +60,16 @@ a {
 /* header */
 /* logo */
 .main_header {
+  position: fixed;
   width: 100%;
   height: 88px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 20px 100px 20px 100px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid rgba(222, 222, 222, 0.2);
+  background-color: rgba(35, 31, 32, 0.8);
+  backdrop-filter: blur(10px);
 }
 .main_header .logo_container {
   flex: 3 0 0;
@@ -337,7 +340,7 @@ a {
   width: 31.1111%;
   height: 315px;
   margin-right: 3.3333%;
-  border-radius: 10px;
+  border-radius: 20px;
   background-color: palegoldenrod;
 }
 .project .project_container .project_column .projects .project_object img {
