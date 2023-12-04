@@ -6,6 +6,11 @@
     <title>JIWON'S PORTFOLIO</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="icon" href="./img/ci.png" />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
   </head>
   <body>
     <div class="container pretendard">
@@ -109,7 +114,9 @@
                 /></a>
               </div>
             </div>
-            <div class="img_box"></div>
+            <div class="img_box">
+              <img src="./img/profile_01.jpg" alt="" />
+            </div>
           </div>
           <div class="about_info">
             <ul class="about_column">
@@ -147,7 +154,8 @@
                 <h4 class="about_info_tit">certification</h4>
                 <p class="about_info_detail chosun">
                   <br />
-                  2023. 09 GTQ 1급 (국가공인) <br />
+                  2023. 09 GTQ 포토샵 1급 (국가공인) <br />
+                  2023. 09 GTQ 일러스트레이터 1급 (국가공인) <br />
                   2018. 04 2종 보통 운전면허
                 </p>
               </li>
@@ -355,14 +363,42 @@
         </div>
       </section>
       <!-- //skill -->
+
       <!-- project -->
       <section id="project" class="project">
+        <!-- popup -->
+        <div class="popup_bg">
+          <div id="popup_cont">
+            <button class="popup_close">
+              <img src="./img/icon_close.png" alt="닫기 버튼" />
+            </button>
+            <div id="popup_cont_wrap">
+              <div class="popup_img_box">
+                <img src="./img/" alt="" />
+              </div>
+              <div class="popup_txt_box">
+                <h4 class="popup_number">01 - 06</h4>
+                <h1 class="popup_title">펀아이디어(FUNiDEA)</h1>
+                <p class="popup_">제작일 : 2023. 11 제작</p>
+                <p class="popup_">기여도 : 기여도 100%</p>
+                <p class="popup_detail">
+                  설명 : <br />
+                  2023년 11월에 제작한 크라우드 펀딩 기반의 반응형 웹사이트
+                  입니다. 웹사이트 메인과상세페이지 멤버별페이지를 완성하였고,
+                  반응형 슬라이더, Aos플로그인을 이용한 애니메이션, 게시판,
+                  form을 이용하여 다양한 웹사이트를 제작하였습니다.
+                </p>
+                <button class="popup_btn">사이트 보러가기</button>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="project_container">
           <h2 class="project_tit">Project</h2>
           <ul class="project_column">
             <li class="">
               <ul class="projects 01">
-                <li class="project_object">
+                <li id="project_list_01" class="project_object">
                   <a
                     href="https://jiwon-thedesigner.github.io/portfolio-2023_funidea/"
                   >
@@ -428,21 +464,93 @@
         <div class="contact_container">
           <h2 class="contact_tit">Contact</h2>
           <div class="contact_info">
-            <h2 class="contact_big_tit">나와 협력하는데 관심이 있나요?</h2>
+            <h2 class="contact_big_tit">저에 대해 더 알고 싶으신가요?</h2>
             <p class="contact_detail">
-              저는 항상 제품 디자인 작업이나 파트너십 기회에 대해 논의할 준비가
-              되어 있습니다.
+              저는 항상 디자인 작업이나 파트너십 기회에 대해 논의할 준비가 되어
+              있습니다.
             </p>
           </div>
-          <div class="btn_container">
-            <div class="btn_inner">
-              <a class="btn_tit" href="#">Contact Start</a>
-              <img class="btn_img" src="./img/arrow.png" alt="화살표 아이콘" />
+          <form id="contact_form">
+            <div class="contanct_form_cont">
+              <input type="hidden" name="contact_number" class="user_input" />
+              <input
+                type="text"
+                name="name"
+                class="user_input"
+                placeholder="성함을 입력해주세요."
+              />
+              <input
+                type="text"
+                name="email"
+                class="user_input"
+                placeholder="이메일 주소를 입력해주세요."
+              />
+              <input
+                type="text"
+                name="phone"
+                class="user_input"
+                placeholder="연락처를 입력해주세요.(생략 가능)"
+              />
+              <textarea
+                name="message"
+                id="sendMessage"
+                rows="5"
+                class="message_input"
+                placeholder="내용을 입력해주세요."
+              ></textarea>
+              <input
+                type="button"
+                name="submit"
+                class="btn_white"
+                value="메일보내기"
+              />
             </div>
-          </div>
+          </form>
         </div>
       </section>
       <!-- //contact -->
+
+      <script type="text/javascript">
+        $(document).ready(function () {
+          emailjs.init("i27cgGRPAeYBWuNpY");
+          //"user_xxxxx"이 부분은 사용자마다 다르니 반드시 emailJS의 installation 화면을 확인
+          $("input[name=submit]").click(function () {
+            var templateParams = {
+              //각 요소는 emailJS에서 설정한 템플릿과 동일한 명으로 작성!
+              name: $("input[name=name]").val(),
+              phone: $("input[name=phone]").val(),
+              email: $("input[name=email]").val(),
+              message: $("textarea[name=message]").val(),
+            };
+
+            emailjs
+              .send("jiwon", "template_4267ob9", templateParams)
+              //emailjs.send('service ID', 'template ID', 보낼 내용이 담긴 객체)
+              .then(
+                function (response) {
+                  console.log("SUCCESS!", response.status, response.text);
+                },
+                function (error) {
+                  console.log("FAILED...", error);
+                }
+              );
+          });
+        });
+
+        // popup
+        function show() {
+          document.querySelector(".popup_bg").className = "popup_bg show";
+        }
+
+        function close() {
+          document.querySelector(".popup_bg").className = "popup_bg";
+        }
+
+        document
+          .querySelector("#show")
+          .addEventListener("project_object", show);
+        document.querySelector("#close").addEventListener("click", close);
+      </script>
     </div>
   </body>
 </html>
