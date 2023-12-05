@@ -70,6 +70,7 @@ a {
   border-bottom: 1px solid rgba(222, 222, 222, 0.2);
   background-color: rgba(35, 31, 32, 0.8);
   backdrop-filter: blur(10px);
+  z-index: 1111;
 }
 .main_header .logo_container {
   flex: 3 0 0;
@@ -326,97 +327,7 @@ a {
   padding-bottom: 8px;
 }
 
-/* 팝업 창 */
-
-.popup_bg {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  /* 숨기기 */
-  z-index: -1;
-  opacity: 0;
-}
-#popup_cont {
-  z-index: 1000;
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 1000px;
-  height: 500px;
-  background: #fff;
-}
-#popup_cont .popup_close {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  outline: none;
-  border: none;
-  background: none;
-  right: 0;
-  top: 0;
-  width: 24px;
-  height: 24px;
-  margin: 10px;
-  cursor: pointer;
-}
-
-#popup_cont_wrap {
-  background: darkblue;
-}
-#popup_cont_wrap .popup_img_box {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  background: darkcyan;
-}
-#popup_cont_wrap .popup_txt_box {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  padding: 40px;
-}
-#popup_cont_wrap .popup_txt_box .popup_number {
-  color: #333;
-  font-size: 16px;
-  font-weight: 700;
-
-  padding-bottom: 20px;
-  border-bottom: 1px solid #ddd;
-}
-#popup_cont_wrap .popup_txt_box .popup_title {
-  color: #333;
-  font-size: 40px;
-  font-weight: 700;
-  margin: 20px 0;
-}
-#popup_cont_wrap .popup_txt_box .popup_detail {
-  color: #333;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-}
-#popup_cont_wrap .popup_txt_box .popup_btn {
-  position: absolute;
-  right: 32px;
-  bottom: 32px;
-  border: none;
-  outline: none;
-  padding: 16px 24px;
-  color: #fff;
-  border-radius: 10px;
-  background: #333;
-}
 /* project */
-
 .project {
   padding: 0 160px 0 160px;
 }
@@ -440,7 +351,6 @@ a {
   height: 315px;
   margin-right: 3.3333%;
   border-radius: 20px;
-  background-color: palegoldenrod;
 }
 .project .project_container .project_column .projects .project_object img {
   width: 100%;
@@ -531,4 +441,516 @@ a {
   border-radius: 50px;
   background-color: #35af60;
   margin-bottom: 160px;
+}
+
+@media (max-width: 1280px) {
+  .main_header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+  .main_header .logo_container .logo_tit {
+    font-size: 28px;
+  }
+  .main_header .logo_container .logo_img {
+    width: 36px;
+  }
+  .main_header .btn_container .btn_inner {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+  }
+  .main_header .btn_container .btn_inner .btn_tit {
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1;
+    color: #fff;
+  }
+  .main_header .btn_container .btn_inner .btn_img {
+    vertical-align: bottom;
+    padding-left: 4px;
+  }
+  /* intro */
+  .intro .intro_tit {
+    font-size: 100px;
+  }
+  .intro .ov_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+  .intro .ov_container .ov_tit {
+    font-size: 16px;
+  }
+  .intro .ov_container .ov_detail {
+    font-size: 14px;
+  }
+  /* intro > arrow */
+  .intro .arrow_container {
+    margin-top: 100px;
+  }
+
+  /* about */
+  .about {
+    padding: 0 100px 0 100px;
+  }
+  .about .about_container {
+    margin-bottom: 100px;
+  }
+  /* about text box */
+  .about .about_container .text_box .about_big_tit {
+    font-size: 60px;
+  }
+  .about .about_container .about_detail {
+    font-size: 14px;
+  }
+
+  /* about image box */
+  .about .about_container .img_box {
+    width: 600px;
+    height: 420px;
+    margin-right: 40px;
+    background-color: #ddd;
+  }
+
+  /* about info */
+  /* about info text */
+  .about_info_tit {
+    font-size: 20px;
+  }
+  .about_info_detail {
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  /* Skill */
+  .skill {
+    padding: 0 100px 0 100px;
+  }
+  .skill .skill_container {
+    margin-bottom: 100px;
+  }
+  .skill .skill_container .skill_column .skills {
+    padding: 0;
+  }
+  .skill
+    .skill_container
+    .skill_column
+    .skills
+    .skill_object
+    .skill_title_group
+    h4 {
+    font-size: 18px;
+    letter-spacing: 0.2px;
+  }
+  .skill .skill_container .skill_column .skills .skill_object > img {
+    width: 70px;
+  }
+  /* project */
+  .project {
+    padding: 0 100px 0 100px;
+  }
+  .project .project_container {
+    margin-bottom: 100px;
+  }
+  .project .project_container .project_column .projects .project_object {
+    height: 260px;
+  }
+
+  /* Contact */
+  .contact {
+    padding: 0 100px 100px 100px;
+  }
+  .contact .contact_container .contact_info .contact_big_tit {
+    font-size: 60px;
+    margin-bottom: 20px;
+  }
+  .contact .contact_container .contact_info .contact_detail {
+    font-size: 20px;
+    font-weight: normal;
+  }
+  .contact #contact_form .user_input {
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+  }
+  .contact #contact_form .message_input {
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+  }
+  .contact .contact_container .btn_white {
+    font-size: 16px;
+    padding: 14px 24px;
+  }
+}
+@media (max-width: 768px) {
+  .main_header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+  .main_header .logo_container .logo_tit {
+    font-size: 24px;
+  }
+  .main_header .logo_container .logo_img {
+    width: 32px;
+    margin-right: 60px;
+  }
+  .main_header .btn_container .btn_inner {
+    display: flex;
+    align-items: center;
+    padding: 8px 14px;
+  }
+
+  .main_header .top_menu .menu_list {
+    padding-right: 40px;
+  }
+  .main_header .top_menu .menu_list a {
+    font-size: 14px;
+  }
+  .main_header .btn_container .btn_inner .btn_tit {
+    font-size: 14px;
+  }
+  .main_header .btn_container .btn_inner .btn_img {
+    width: 22px;
+  }
+  /* intro */
+  .intro .intro_tit {
+    font-size: 80px;
+    line-height: 1.2;
+  }
+  .intro .intro_container {
+    margin: 0 160px 60px 160px;
+  }
+  .intro .ov_container {
+    display: flex;
+    justify-content: center;
+  }
+  .intro .ov_container .ov_tit {
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+  .intro .ov_container .ov_detail {
+    font-size: 14px;
+    width: 100%;
+  }
+  /* intro > arrow */
+  .intro .arrow_container {
+    margin-top: 100px;
+  }
+  /* about */
+  .about {
+    padding: 0 20px 0 20px;
+  }
+  .about .about_container {
+    margin-bottom: 60px;
+  }
+  .about .about_container .about_tit {
+    font-size: 16px;
+    padding: 80px 0 80px 0;
+  }
+  /* about text box */
+  .about .about_container .text_box {
+    width: 60%;
+  }
+  .about .about_container .text_box .about_big_tit {
+    font-size: 46px;
+    margin-bottom: 20px;
+  }
+  .about .about_container .text_box .about_detail {
+    padding-right: 40px;
+    margin-bottom: 20px;
+  }
+
+  /* about image box */
+  .about .about_container .img_box {
+    width: 420px;
+    height: 460px;
+    margin-right: 0px;
+    background-color: #ddd;
+  }
+
+  /* about info */
+  /* about info text */
+  .about_info_tit {
+    font-size: 16px;
+  }
+  .about_info_detail {
+    width: 90%;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  /* Skill */
+  .skill {
+    padding: 0 20px 0 20px;
+  }
+  .skill .skill_container {
+    margin-bottom: 60px;
+  }
+  .skill .skill_container .skill_tit {
+    font-size: 16px;
+    padding: 80px 0 80px 0;
+  }
+
+  .skill .skill_container .skill_column .skills .skill_object > img {
+    width: 48px;
+    height: 48px;
+  }
+  .skill
+    .skill_container
+    .skill_column
+    .skills
+    .skill_object
+    .skill_title_group {
+    margin-left: 16px;
+  }
+  .skill
+    .skill_container
+    .skill_column
+    .skills
+    .skill_object
+    .skill_title_group
+    .skill_star_group
+    > img {
+    width: 18px;
+  }
+  .skill
+    .skill_container
+    .skill_column
+    .skills
+    .skill_object
+    .skill_title_group
+    h4 {
+    font-size: 16px;
+    padding-bottom: 4px;
+  }
+
+  /* project */
+  .project {
+    padding: 0 20px 0 20px;
+  }
+  .project .project_container {
+    margin-bottom: 60px;
+  }
+  .project .project_container .project_column .projects {
+    margin-bottom: 20px;
+  }
+  .project .project_container .project_column .projects .project_object {
+    height: 180px;
+  }
+
+  /* Contact */
+  .contact {
+    padding: 0 20px 20px 20px;
+  }
+  .contact .contact_container .contact_info .contact_big_tit {
+    font-size: 48px;
+  }
+  .contact .contact_container .contact_info .contact_detail {
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .main_header {
+    padding: 0 20px 0 20px;
+  }
+  .main_header .logo_container .logo_tit {
+    font-size: 18px;
+  }
+  .main_header .logo_container .logo_img {
+    width: 24px;
+    padding-left: 6px;
+  }
+
+  .main_header .top_menu .menu_list {
+    padding: 0;
+  }
+  .main_header .top_menu .menu_list a {
+    font-size: 14px;
+    margin-right: 10px;
+  }
+  .main_header .btn_container {
+    flex: 3 0 0;
+    margin-right: 50px;
+  }
+  .main_header .btn_container {
+    display: none;
+  }
+
+  /* intro */
+  .intro .intro_tit {
+    font-size: 60px;
+    line-height: 1.2;
+  }
+  .intro .intro_container {
+    margin: 0 20px 0 20px;
+  }
+  .intro .ov_container {
+    display: flex;
+    justify-content: center;
+  }
+  .intro .ov_container .ov_tit {
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+  .intro .ov_container .ov_detail {
+    font-size: 14px;
+    width: 100%;
+  }
+  /* intro > arrow */
+  .intro .arrow_container {
+    margin-top: 100px;
+  }
+  /* about */
+  .about {
+    padding: 0 20px 0 20px;
+  }
+  .about .about_container {
+    margin-bottom: 60px;
+  }
+  .about .about_container .about_tit {
+    font-size: 16px;
+    padding: 80px 0 80px 0;
+  }
+  /* about text box */
+  .about .about_container .text_box {
+    display: block;
+    width: 60%;
+  }
+  .about .about_container .text_box .about_big_tit {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  .about .about_container .text_box .about_detail {
+    font-size: 12px;
+    line-height: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* about image box */
+  .about .about_container .img_box {
+    width: 200px;
+    height: 300px;
+  }
+
+  /* about info */
+  /* about info text */
+  .about_info_tit {
+    font-size: 16px;
+  }
+  .about_info_detail {
+    width: 90%;
+    font-size: 12px;
+    line-height: 20;
+    line-height: 24px;
+    background-color: s;
+  }
+
+  /* Skill */
+  .skill {
+    padding: 0 20px 0 20px;
+  }
+  .skill .skill_container {
+    margin-bottom: 60px;
+  }
+  .skill .skill_container .skill_tit {
+    font-size: 16px;
+    padding: 80px 0 80px 0;
+  }
+
+  .skill .skill_container .skill_column .skills .skill_object > img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+  }
+  .skill
+    .skill_container
+    .skill_column
+    .skills
+    .skill_object
+    .skill_title_group {
+    margin-left: 0;
+  }
+  .skill
+    .skill_container
+    .skill_column
+    .skills
+    .skill_object
+    .skill_title_group
+    .skill_star_group
+    > img {
+    width: 18px;
+  }
+  .skill
+    .skill_container
+    .skill_column
+    .skills
+    .skill_object
+    .skill_title_group
+    h4 {
+    font-size: 14px;
+    padding-bottom: 4px;
+  }
+
+  /* project */
+  .project {
+    padding: 0 20px 0 20px;
+  }
+  .project .project_container {
+    margin-bottom: 60px;
+  }
+  .project .project_container .project_column .projects {
+    margin-bottom: 20px;
+  }
+  .project .project_container .project_column .projects .project_object {
+    height: 120px;
+  }
+
+  /* Contact */
+  .contact {
+    padding: 0 20px 20px 20px;
+  }
+  .contact .contact_container .contact_tit {
+    font-size: 16px;
+  }
+  .contact .contact_container .contact_info .contact_big_tit {
+    font-size: 32px;
+  }
+  .contact .contact_container .contact_info .contact_detail {
+    font-size: 14px;
+  }
+  .contact #contact_form {
+    position: relative;
+  }
+  .contact #contact_form .contanct_form_cont {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    width: 100%;
+  }
+  .contact #contact_form .user_input {
+    width: 100%;
+    height: 50px;
+    padding: 8px;
+    font-size: 14px;
+  }
+  .contact #contact_form .message_input {
+    width: 100%;
+    height: 200px;
+    padding: 8px;
+    font-size: 14px;
+  }
+  .contact .contact_container .btn_white {
+    font-size: 14px;
+  }
 }

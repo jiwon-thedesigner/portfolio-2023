@@ -5,70 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>popup</title>
     <style>
-      .background {
-        position: fixed;
-        top: 0;
+      .popup_bg {
+        position: absolute;
         left: 0;
+        top: 0;
         width: 100%;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.3);
-        z-index: 1000;
-
-        /* 숨기기 */
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        /* 숨기기
         z-index: -1;
         opacity: 0;
       }
-
-      .show {
-        opacity: 1;
+      #popup_cont {
         z-index: 1000;
-        transition: all 0.5s;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 1000px;
+        height: 500px;
+        background: #fff;
       }
-      .close {
+      #popup_cont .popup_close {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: absolute;
-        left: 0;
+        outline: none;
+        border: none;
+        background: none;
+        right: 0;
         top: 0;
         width: 24px;
         height: 24px;
-        border: 0;
-      }
-      .window {
-        position: relative;
-        width: 100%;
-        height: 100%;
+        margin: 10px;
+        cursor: pointer;
       }
 
-      .popup {
+      #popup_cont_wrap {
+        background: darkblue;
+      }
+      #popup_cont_wrap .popup_img_box {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #ffffff;
-        box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
-
-        /* 임시 지정 */
-        width: 100px;
-        height: 100px;
-
-        /* 초기에 약간 아래에 배치 */
-        transform: translate(-50%, -40%);
+        left: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background: darkcyan;
       }
+      #popup_cont_wrap .popup_txt_box {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        padding: 40px;
+      }
+      #popup_cont_wrap .popup_txt_box .popup_number {
+        color: #333;
+        font-size: 16px;
+        font-weight: 700;
 
-      .show .popup {
-        transform: translate(-50%, -50%);
-        transition: all 0.5s;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+      }
+      #popup_cont_wrap .popup_txt_box .popup_title {
+        color: #333;
+        font-size: 40px;
+        font-weight: 700;
+        margin: 20px 0;
+      }
+      #popup_cont_wrap .popup_txt_box .popup_detail {
+        color: #333;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+      }
+      #popup_cont_wrap .popup_txt_box .popup_btn {
+        position: absolute;
+        right: 32px;
+        bottom: 32px;
+        border: none;
+        outline: none;
+        padding: 16px 24px;
+        color: #fff;
+        border-radius: 10px;
+        background: #333;
       }
     </style>
   </head>
   <body>
-    <button id="show">팝업열기</button>
-    <div class="background">
-      <div class="window">
-        <div class="popup">
-          <button id="close"><img src="./img/icon_close.png" alt="" /></button>
-        </div>
-        <div>
-          <div></div>
+    <div class="popup_bg">
+      <div id="popup_cont">
+        <button class="popup_close">
+          <img src="./img/icon_close.png" alt="닫기 버튼" />
+        </button>
+        <div id="popup_cont_wrap">
+          <div class="popup_img_box">
+            <img src="./img/" alt="" />
+          </div>
+          <div class="popup_txt_box">
+            <h4 class="popup_number">01 - 06</h4>
+            <h1 class="popup_title">펀아이디어(FUNiDEA)</h1>
+            <p class="popup_">제작일 : 2023. 11 제작</p>
+            <p class="popup_">기여도 : 기여도 100%</p>
+            <p class="popup_detail">
+              설명 : <br />
+              2023년 11월에 제작한 크라우드 펀딩 기반의 반응형 웹사이트 입니다.
+              웹사이트 메인과상세페이지 멤버별페이지를 완성하였고, 반응형
+              슬라이더, Aos플로그인을 이용한 애니메이션, 게시판, form을 이용하여
+              다양한 웹사이트를 제작하였습니다.
+            </p>
+            <button class="popup_btn">사이트 보러가기</button>
+          </div>
         </div>
       </div>
     </div>
