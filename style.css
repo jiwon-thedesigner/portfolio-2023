@@ -326,6 +326,127 @@ a {
   line-height: 24px;
   padding-bottom: 8px;
 }
+/*팝업*/
+.popup_bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+
+  /* 숨기기*/
+  z-index: -1;
+  opacity: 0;
+}
+
+.popup_bg.active {
+  z-index: 999;
+  opacity: 1;
+}
+
+#popup_cont {
+  z-index: 1000;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  height: 500px;
+  background: #fff;
+}
+.popup_bg .popup_close_01,
+.popup_bg .popup_close_02,
+.popup_bg .popup_close_03,
+.popup_bg .popup_close_04,
+.popup_bg .popup_close_05 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  outline: none;
+  border: none;
+  background: none;
+  right: 0;
+  top: 0;
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 999;
+  /*background: salmon;*/
+}
+.popup_close_01 {
+  z-index: 9999;
+}
+.popup_bg.popup_02 .popup_close_02 {
+  z-index: 999;
+}
+
+#popup_cont_wrap {
+  background: darkblue;
+}
+#popup_cont_wrap .popup_img_box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: darkcyan;
+}
+#popup_cont_wrap .popup_txt_box {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  padding: 40px;
+}
+#popup_cont_wrap .popup_txt_box .popup_number {
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+#popup_cont_wrap .popup_txt_box .popup_title {
+  color: #333;
+  font-size: 40px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+#popup_cont_wrap .popup_txt_box .popup_detail_01 {
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  display: inline;
+}
+#popup_cont_wrap .popup_txt_box .popup_detail_02 {
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  display: inline;
+}
+#popup_cont_wrap .popup_txt_box .popup_detail_03 {
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+#popup_cont_wrap .popup_txt_box .popup_btn {
+  position: absolute;
+  right: 32px;
+  bottom: 32px;
+  border: none;
+  outline: none;
+  padding: 16px 24px;
+  color: #fff;
+  border-radius: 10px;
+  background: #333;
+}
 
 /* project */
 .project {
@@ -358,7 +479,7 @@ a {
   border-radius: 10px;
   object-fit: cover;
 }
-.project .project_container .project_column .projects #project_object_01_3 {
+.project .project_container .project_column .projects #project_list_03 {
   margin-right: 0;
 }
 /* Contact */
