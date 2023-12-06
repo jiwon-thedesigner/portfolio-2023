@@ -479,7 +479,8 @@ a {
   border-radius: 10px;
   object-fit: cover;
 }
-.project .project_container .project_column .projects #project_list_03 {
+.project .project_container .project_column .projects #project_list_03,
+.project .project_container .project_column .projects #project_list_06 {
   margin-right: 0;
 }
 /* Contact */
