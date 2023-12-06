@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+        emailjs.init("i27cgGRPAeYBWuNpY");
+      })();
+    </script>
+  </head>
+  <body>
+    <br>
+      <input
+        type="text"
+        id="fullName"
+        placeholder="성함을 입력해주세요."
+        required
+      /><br/>
+      <input
+        type="text"
+        id="email_id"
+        placeholder="이메일 주소를 입력해주세요."
+        required
+      /><br/>
+      <textarea
+        name="message"
+        id="message"
+        placeholder="내용을 입력해주세요."
+        required
+      ></textarea><br/>
+      <button onclick="SendMail()">Send</button>
+    </div>
+    <script>
+      //script.js
+      function SendMail() {
+        var params = {
+          from_name: document.getElementById("fullName").value,
+          email_id: document.getElementById("email_id").value,
+          message: document.getElementById("message").value,
+        };
+        emailjs
+          .send("service_8gvr37t", "template_4267ob9", params)
+          .then(function (res) {
+            alert("Success! " + res.status);
+          });
+      }
+    </script>
+  </body>
+</html>

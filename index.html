@@ -6,11 +6,15 @@
     <title>JIWON'S PORTFOLIO</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="icon" href="./img/ci.png" />
-
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
     ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("i27cgGRPAeYBWuNpY");
+      })();
+    </script>
   </head>
   <body>
     <div class="container pretendard">
@@ -39,7 +43,7 @@
         <!-- header 오른쪽 버튼 -->
         <div class="btn_container">
           <div class="btn_inner">
-            <a class="btn_tit" href="#">Kakao</a>
+            <a class="btn_tit" href="#contact">Cotanct</a>
             <img class="btn_img" src="./img/arrow.png" alt="화살표 아이콘" />
           </div>
         </div>
@@ -445,84 +449,49 @@
           </div>
           <form id="contact_form">
             <div class="contanct_form_cont">
-              <input type="hidden" name="contact_number" class="user_input" />
               <input
                 type="text"
-                name="name"
+                id="fullName"
                 class="user_input"
                 placeholder="성함을 입력해주세요."
+                required
               />
               <input
                 type="text"
-                name="email"
+                id="email_id"
                 class="user_input"
                 placeholder="이메일 주소를 입력해주세요."
-              />
-              <input
-                type="text"
-                name="phone"
-                class="user_input"
-                placeholder="연락처를 입력해주세요.(생략 가능)"
+                required
               />
               <textarea
                 name="message"
-                id="sendMessage"
-                rows="5"
+                id="message"
                 class="message_input"
                 placeholder="내용을 입력해주세요."
+                required
               ></textarea>
-              <input
-                type="button"
-                name="submit"
-                class="btn_white"
-                value="메일보내기"
-              />
+              <button onclick="SendMail()" class="btn_white" value="메일보내기">
+                Send
+              </button>
             </div>
           </form>
         </div>
       </section>
       <!-- //contact -->
-
-      <script type="text/javascript">
-        $(document).ready(function () {
-          emailjs.init("i27cgGRPAeYBWuNpY");
-          //"user_xxxxx"이 부분은 사용자마다 다르니 반드시 emailJS의 installation 화면을 확인
-          $("input[name=submit]").click(function () {
-            var templateParams = {
-              //각 요소는 emailJS에서 설정한 템플릿과 동일한 명으로 작성!
-              name: $("input[name=name]").val(),
-              phone: $("input[name=phone]").val(),
-              email: $("input[name=email]").val(),
-              message: $("textarea[name=message]").val(),
-            };
-
-            emailjs
-              .send("jiwon", "template_4267ob9", templateParams)
-              //emailjs.send('service ID', 'template ID', 보낼 내용이 담긴 객체)
-              .then(
-                function (response) {
-                  console.log("SUCCESS!", response.status, response.text);
-                },
-                function (error) {
-                  console.log("FAILED...", error);
-                }
-              );
-          });
-        });
-
-        // popup
-        function show() {
-          document.querySelector(".popup_bg").className = "popup_bg show";
+      <script>
+        //script.js
+        function SendMail() {
+          var params = {
+            from_name: document.getElementById("fullName").value,
+            email_id: document.getElementById("email_id").value,
+            message: document.getElementById("message").value,
+          };
+          emailjs
+            .send("service_8gvr37t", "template_4267ob9", params)
+            .then(function (res) {
+              alert("Success! " + res.status);
+            });
         }
-
-        function close() {
-          document.querySelector(".popup_bg").className = "popup_bg";
-        }
-
-        document
-          .querySelector("#show")
-          .addEventListener("project_object", show);
-        document.querySelector("#close").addEventListener("click", close);
       </script>
     </div>
   </body>
