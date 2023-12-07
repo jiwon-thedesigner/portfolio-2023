@@ -883,7 +883,7 @@ a {
     font-size: 16px;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 720px) {
   .main_header {
     padding: 0 20px 0 20px;
   }
