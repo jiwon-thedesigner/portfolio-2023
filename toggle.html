@@ -4,8 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Toggle Menu</title>
+    <style>
+      .menu {
+        background: url("./portfolio-2023_funidea/images/icon_more.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      .menu.active {
+        background: url("./portfolio-2023_funidea/images/icon_cancel.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        transition: 0.3s;
+        z-index: 999;
+        top: 10px;
+        right: 30px;
+      }
+    </style>
   </head>
   <body>
-    <div class="menu" onclick="sideMenu();"></div>
+    <div class="menu" onclick="sideMenu();">
+      <li><a href="">안녕하세요.</a></li>
+      <li><a href="">티스토리</a></li>
+      <li><a href="">반갑습니다.</a></li>
+      <li><a href="">감사합니다.</a></li>
+    </div>
+
+    <script>
+      function sideMenu() {
+        let menu = document.querySelector(".menu");
+        menu.classList.toggle("active");
+      }
+    </script>
   </body>
 </html>
