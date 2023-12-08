@@ -310,8 +310,12 @@ a {
   flex-wrap: wrap;
   width: 33.3333%;
 }
+.skill .skill_container .skill_column .skills .skill_object > img {
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
+}
 .skill .skill_container .skill_column .skills .skill_object .skill_title_group {
-  margin-left: 40px;
 }
 .skill
   .skill_container
@@ -341,7 +345,7 @@ a {
 }
 
 .popup_bg.active {
-  z-index: 999;
+  z-index: 9999;
   opacity: 1;
 }
 
@@ -351,8 +355,8 @@ a {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 1000px;
-  height: 500px;
+  width: 80vw;
+  height: 80vh;
   background: #fff;
 }
 .popup_bg .popup_close_01,
@@ -384,34 +388,31 @@ a {
 }
 
 #popup_cont_wrap {
-  background: darkblue;
+  display: flex;
 }
 #popup_cont_wrap .popup_img_box {
-  position: absolute;
-  left: 0;
-  top: 0;
   width: 60%;
-  height: 100%;
-  background: darkcyan;
+  height: 80vh;
 }
 #popup_cont_wrap .popup_img_box > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  box-sizing: border-box;
+  background-color: saddlebrown;
 }
 #popup_cont_wrap .popup_txt_box {
-  position: absolute;
-  right: 0;
-  top: 0;
+  position: relative;
+
   width: 40%;
-  height: 100%;
+  height: 80vh;
   padding: 40px;
+  box-sizing: border-box;
 }
 #popup_cont_wrap .popup_txt_box .popup_number {
   color: #333;
   font-size: 16px;
   font-weight: 700;
-
   padding-bottom: 20px;
   border-bottom: 1px solid #ddd;
 }
@@ -440,9 +441,11 @@ a {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+  margin-bottom: 20px;
 }
 #popup_cont_wrap .popup_txt_box .popup_btn {
   position: absolute;
+
   right: 32px;
   bottom: 32px;
   border: none;
@@ -673,7 +676,119 @@ a {
   }
   .skill .skill_container .skill_column .skills .skill_object > img {
     width: 70px;
+    margin-bottom: 10px;
+    margin-right: 10px;
   }
+
+  /*팝업*/
+  .popup_bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+
+    /* 숨기기*/
+    z-index: -1;
+    opacity: 0;
+  }
+
+  .popup_bg.active {
+    z-index: 9999;
+    opacity: 1;
+  }
+
+  #popup_cont {
+    z-index: 1000;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: 80vh;
+    background: #fff;
+  }
+  .popup_close_01 {
+    z-index: 9999;
+  }
+  .popup_bg.popup_02 .popup_close_02 {
+    z-index: 999;
+  }
+
+  #popup_cont_wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #popup_cont_wrap .popup_img_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40vh;
+  }
+  #popup_cont_wrap .popup_img_box > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+    background-color: saddlebrown;
+  }
+  #popup_cont_wrap .popup_txt_box {
+    position: relative;
+
+    width: 100%;
+    height: 40vh;
+    padding: 40px;
+    box-sizing: border-box;
+  }
+  #popup_cont_wrap .popup_txt_box .popup_number {
+    color: #333;
+    font-size: 16px;
+    font-weight: 700;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  #popup_cont_wrap .popup_txt_box .popup_title {
+    color: #333;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 20px 0;
+  }
+  #popup_cont_wrap .popup_txt_box .popup_detail_01 {
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    display: inline;
+  }
+  #popup_cont_wrap .popup_txt_box .popup_detail_02 {
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    display: inline;
+  }
+  #popup_cont_wrap .popup_txt_box .popup_detail_03 {
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+  #popup_cont_wrap .popup_txt_box .popup_btn {
+    position: absolute;
+
+    right: 32px;
+    bottom: 32px;
+    border: none;
+    outline: none;
+    padding: 16px 24px;
+    color: #fff;
+    border-radius: 10px;
+    background: #333;
+  }
+
   /* project */
   .project {
     padding: 0 100px 0 100px;
